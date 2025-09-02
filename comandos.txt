@@ -1,0 +1,63 @@
+Comandos usados
+# npm init -y   para iniciar y tener el package.json
+
+# npm install express express-session mysql2 zod helmet morgan cors bcrypt dotenv
+para instalar las librerias etc
+
+# npm install -D typescript ts-node-dev @types/node @types/express @types/express-session @types/morgan @types/cors @types/bcrypt
+ para dependencias de desarrollo 
+
+ # npm install Standard -D   // para formatear e identar 
+ Y esto en el package para usar standard en la extension eslint
+ "eslintConfig": {
+    "extends": "standard"
+  } //para que use esa configuracion de standard
+
+
+
+# npm i -D tsx //para instalar tsx que funciona mejor con ESM y TS
+
+editamos el package.json para usar modulos y para el comando dev
+
+  "name": "instaladores",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+
+  # npx tsc --init   // para iniciar TS
+
+en tsconfig:
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "sourceMap": true
+  },
+  "include": ["src"]
+}
+
+
+### Estructura de carpetas 
+mkdir src
+mkdir src\config
+mkdir src\controllers
+mkdir src\middlewares
+mkdir src\routes
+mkdir src\services
+mkdir src\utils
+mkdir public
+mkdir scripts
+
